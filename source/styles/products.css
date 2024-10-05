@@ -1,0 +1,141 @@
+/* заглавие страницы */
+
+.products-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #1317a0;
+    font-weight: 600;
+}
+
+/* все продукты бренда */
+
+.all-products {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.product-item-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: center;
+    background: rgb(224, 243, 251);
+    border-radius: 25px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-item-container:hover {
+    background: rgb(106, 202, 243);
+}
+
+.product-item-container:hover .product-img {
+    transform: scale(1.1);
+}
+
+.info>h3 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 24px;
+    color: #1317a0;
+}
+
+.info>p{
+    color: #1317a0;
+}
+
+/* 5 элементов защиты бренда */
+
+.safety-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.safety-title>h2 {
+    font-weight: 600;
+    font-size: 24px;
+    color: #1317a0;
+    margin: 20px;
+}
+
+.safety-title>p {
+    font-size: 18px;
+}
+
+.safety-rules {
+    display: grid;
+    grid-template-areas:
+        "a b"
+        "c d"
+        "c e";
+    grid-template-columns: 379px 1fr;
+    gap: 20px;
+    counter-reset: safety-counter;
+}
+
+.safety-rules-item {
+    text-align: start;
+    background: radial-gradient(rgb(208, 237, 254) 0%, rgb(240, 249, 253) 100%);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.safety-rules-item>h2 {
+    font-weight: 500;
+    font-size: 22px;
+    color: #1317a0;
+    margin-bottom: 10px;
+}
+
+.safety-rules-item>p {
+    color: rgb(85, 94, 98);
+    line-height: 1.5;
+}
+
+.safety-rules-item>ul {
+    color: rgb(85, 94, 98);
+    list-style: disc inside;
+    line-height: 1.5;
+}
+
+.subtitle-bold {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media(max-width:900px) {
+    .all-products {
+        flex-direction: column;
+    }
+
+    .product-item-container {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .safety-rules {
+        display: block;
+    }
+
+    .safety-rules-item {
+        margin-bottom: 10px;
+    }
+}
